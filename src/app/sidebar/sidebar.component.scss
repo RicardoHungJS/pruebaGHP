@@ -1,0 +1,89 @@
+$colorTextAndLines: #3d79cc;
+
+.sidebar {
+  padding-top: 30px;
+  box-shadow: inset -15px 0px 24px -12px rgba(255, 255, 255, 0.3), 15px 0px 20px 0px rgba(0, 0, 0, 0.2);
+  width: 15%;
+  min-width: 150px;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(span(5), 300px);
+  align-content: center;
+
+  background: rgb(0, 0, 36);
+  background: linear-gradient(0deg, rgba(0, 0, 36, 1) 35%, rgba(0, 22, 63, 1) 100%);
+
+
+  .botonSideBar {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+    border-bottom: 1px solid rgba($color: #3d79cc, $alpha: 0.1);
+    width: 100%;
+    height: 90px;
+    cursor: pointer;
+
+    transition: 700ms;
+    transition-property: background-color;
+
+    .image {
+      position: relative;
+      width: 35px;
+      top: 0;
+      transition: 400ms;
+      transition-property: width, top;
+
+      .iconos {
+        width: 100%;
+      }
+    }
+
+    a {
+      display: inline-block;
+      width: 90px;
+      margin-left: 10px;
+      text-decoration: none;
+      color: rgba($color: $colorTextAndLines, $alpha: 0.9);
+    }
+  }
+
+  .botonSideBar:last-child {
+    border-bottom: none;
+
+  }
+
+  .botonSideBar:hover {
+    background-color: rgba($color: $colorTextAndLines, $alpha: 0.1);
+
+    .image {
+      width: 40px;
+      top: -6px;
+    }
+  }
+
+}
+
+@media (max-width: 902px) {
+  .sidebarOn{
+    display: grid;
+  }
+  .sidebarOff{
+    display: none;
+  }
+}
+
+.buttonSidebar{
+  background: none;
+  border: none;
+  z-index: 3;
+  position: absolute;
+  width: 150px;
+  height: 60px;
+  // display: none;
+}

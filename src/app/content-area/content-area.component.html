@@ -1,0 +1,53 @@
+<div class="back">
+  <div class="contentCont">
+
+    <div class="informCont" *ngFor="let item of rowData">
+
+      <div class="firstIcon">
+        <p class="covidTitle">Covid-19</p>
+        <img class="covidImg" src="assets/icons/covid.svg" alt="Covid icon">
+      </div>
+
+      <div class="boxs">
+          <div class="boxInfo">
+            <img class="iconInfo" src="assets/icons/dots.svg" alt="Título de campaña">
+            <p class="title">Título de campaña</p>
+            <p class="textFiller">{{item.name}}</p>
+          </div>
+
+          <div class="boxInfo">
+            <img class="iconInfo" src="assets/icons/estrella.svg" alt="Título de campaña">
+            <p class="title">Tipo de la campaña</p>
+            <p class="textFiller">{{item.email}}</p>
+          </div>
+
+          <div class="boxInfo">
+            <img class="iconInfo" src="assets/icons/megafono.svg" alt="Título de campaña">
+            <p class="title">Estatus de campaña</p>
+            <p class="textFiller">{{item.body}}</p>
+          </div>
+
+          <div class="boxInfo">
+            <img class="iconInfo" src="assets/icons/userHeart.svg" alt="Título de campaña">
+            <p class="title">Número de usuarios impactados</p>
+            <p class="textFiller">{{item.id}}</p>
+          </div>
+
+          <div class="boxInfo">
+            <img class="iconInfo" src="assets/icons/calendar.svg" alt="Título de campaña">
+            <p class="title">Fecha y hora de creación</p>
+            <p class="textFiller">29/10/2020 - 9:41 AM</p>
+          </div>
+
+          <div class="boxInfo">
+            <img class="iconInfo" src="assets/icons/calendar.svg" alt="Título de campaña">
+            <p class="title">Fecha y hora de envío</p>
+            <p class="textFiller">29/10/3000 - 9:41 AM</p>
+          </div>
+      </div>
+
+    </div>
+
+  </div>
+  <div class="backGroundColor"></div>
+</div>

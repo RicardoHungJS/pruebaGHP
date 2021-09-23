@@ -1,0 +1,154 @@
+$fontColorPurple: #926cab;
+
+.back {
+  background-image: url(../../assets/images/personalSalud.jfif);
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.backGroundColor {
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 31, 75);
+  background: linear-gradient(260deg, rgba(0, 31, 75, 0.96) 39%, rgba(0, 0, 36, 0.96) 77%);
+}
+
+.contentCont {
+  overflow: auto;
+  position: fixed;
+  right: 0;
+  width: 85%;
+  height: 100%;
+  margin-top: 60px;
+  margin-bottom: 100px;
+
+  .informCont {
+    min-width: 90%;
+    height: 170px;
+    margin: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba($color: #b8ecff, $alpha: 0.2);
+    background-color: rgba(77, 94, 118, 0.38);
+
+    display: grid;
+    grid-template-rows: 100%;
+    grid-auto-rows: auto;
+    grid-template-columns: 220px 1fr;
+
+    .firstIcon {
+      min-width: 100%;
+      min-height: 100%;
+      border-right: 4px solid rgba($color: #926cab, $alpha: 1);
+
+      display: grid;
+      grid-template-rows: 45% 55%;
+      grid-template-columns: 100%;
+      align-self: center;
+      justify-self: center;
+
+      .covidTitle {
+        display: block;
+        color: $fontColorPurple;
+        font-weight: bolder;
+
+        align-self: end;
+        justify-self: center;
+      }
+
+      .covidImg {
+        display: block;
+        max-width: 25%;
+        max-height: 100%;
+
+        align-self: flex-start;
+        justify-self: center;
+      }
+    }
+
+    .boxs {
+      overflow: hidden;
+      max-height: 100%;
+
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+
+      $borderLC: 0.02px solid rgba($color: #b8ecff, $alpha: 0.07);
+
+      .boxInfo {
+        border: $borderLC;
+
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        grid-template-rows: repeat(2, 50%);
+
+        .iconInfo {
+          display: block;
+          max-width: 30%;
+          max-height: 100%;
+
+          grid-row: 1/3;
+          grid-column: 1/2;
+          align-self: center;
+          justify-self: center;
+        }
+
+        .title {
+          color: $fontColorPurple;
+          font-size: 0.8em;
+          margin: 0;
+
+          align-self: center;
+        }
+
+        .textFiller {
+          max-height: 26px;
+          overflow: auto;
+          color: #fff;
+          font-weight: bolder;
+          margin: 0;
+
+          align-self: center;
+
+        }
+      }
+    }
+
+  }
+
+  .informCont:last-child {
+    margin-bottom: 80px;
+  }
+}
+
+@media (max-width: 902px) {
+  .contentCont {
+    width: 100%;
+
+    .informCont {
+      grid-template-columns: 1fr;
+
+      .firstIcon {
+        display: none;
+      }
+
+      .boxs {
+        overflow: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+
+        .boxInfo {
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: repeat(3, 1fr);
+
+          .iconInfo {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
